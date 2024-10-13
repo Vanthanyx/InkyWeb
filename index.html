@@ -1,0 +1,62 @@
+<head>
+  <title>ɪɴᴋʏ sᴍᴘ</title>
+  <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><text y='32' font-size='32'>🦑</text></svg>"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="slider">
+    <div class="slide-track" id="slide-track"></div>
+  </div>
+  <div class="center-content">
+    <button class="disc-btn" onclick="openDiscord()">
+      <img class="disc-img" src="./assets/DISCORD.png" />
+    </button>
+    <span style="margin: 10px"></span>
+    <button class="app-btn" onclick="downloadApp()">
+      <img class="app-img" src="./assets/GLOBE_GRID.png" />
+    </button>
+  </div>
+
+  <script>
+    const slideTrack = document.getElementById("slide-track");
+    const imageCount = 14;
+
+    for (let i = 0; i < imageCount; i++) {
+      const slideDiv = document.createElement("div");
+      slideDiv.className = "slide";
+
+      const img = document.createElement("img");
+      img.src = "./assets/UNDER_CONSTRUCTION.png";
+      img.height = 100;
+      img.width = 250;
+      img.alt = "";
+
+      slideDiv.appendChild(img);
+      slideTrack.appendChild(slideDiv);
+    }
+
+    function openDiscord() {
+      JSAlert.loader("Redirecting...")
+        .dismissIn(2500)
+        .then(function () {
+          window.location.href = "https://discord.com/invite/hhXuDc2dzE/";
+        });
+    }
+
+    function downloadApp() {
+      JSAlert.confirm(
+        "App is unstable and may not work as expected.",
+        "Beta Release",
+        JSAlert.Icons.Warning,
+        "OK 📄"
+      ).then(function (result) {
+        if (!result) return;
+        JSAlert.loader("Downloading...").dismissIn(2500);
+      });
+    }
+  </script>
+</body>

@@ -1,0 +1,112 @@
+/* General body styling */
+body {
+  background: #e3e3e3;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Keyframes for slider scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/* Slider styling */
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/* Shared button styling */
+button {
+  width: 120px;
+  height: 60px;
+  background-color: white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+}
+
+button:hover {
+  background-color: #334;
+  transform: scale(1.25);
+  border-color: rgba(54, 57, 62, 0.125);
+}
+
+/* Discord button specific styling */
+.disc-btn {
+  border-color: #5865f2;
+}
+
+.disc-img {
+  height: 52px;
+  width: 52px;
+}
+
+/* App button specific styling */
+.app-btn {
+  border-color: #4da0d8;
+}
+
+.app-img {
+  height: 45px;
+  width: 45px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
