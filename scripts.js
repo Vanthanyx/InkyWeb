@@ -17,3 +17,13 @@ document.body.appendChild(dateTimeDiv);
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
+
+function downloadApp() {
+  const downloadURL = "https://inksmp.com/data/InkyHQ.exe";
+  const link = document.createElement("a");
+  link.href = downloadURL;
+  link.download = "InkyHQ.exe";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
