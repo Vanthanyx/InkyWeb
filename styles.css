@@ -1,6 +1,15 @@
-/* General body styling */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+* {
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  background: #e3e3e3;
+  overflow: hidden;
+  background: #1a1a24;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -9,32 +18,60 @@ body {
   height: 100vh;
 }
 
-/* Keyframes for slider scrolling */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
+body::before {
+  --line: color-mix(in lch, #4169e1 25%, transparent);
+  --size: 60px;
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: linear-gradient(
+        90deg,
+        var(--line) 2px,
+        transparent 2px var(--size)
+      )
+      0 -5vmin / var(--size) var(--size),
+    linear-gradient(var(--line) 2px, transparent 2px var(--size)) 0 -5vmin / var(
+        --size
+      ) var(--size);
+  mask: linear-gradient(-15deg, transparent 33%, #4169e1);
+  top: 0;
+  z-index: -1;
 }
 
-/* Slider styling */
+button {
+  width: 120px;
+  height: 60px;
+  background-color: #1a1a24;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+}
+
+button:hover {
+  background-color: #2f2f39;
+  transform: scale(1.25);
+  border-color: rgba(54, 57, 62, 0.125);
+}
+
 .slider {
-  background: white;
+  opacity: 75%;
+  background: #1a1a24;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  width: 100%;
 }
 
 .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 1) 0%,
+    rgba(26, 26, 36, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   content: "";
@@ -56,35 +93,18 @@ body {
 }
 
 .slider .slide-track {
+  opacity: 75%;
   animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
 
 .slider .slide {
+  opacity: 75%;
   height: 100px;
   width: 250px;
 }
 
-/* Shared button styling */
-button {
-  width: 120px;
-  height: 60px;
-  background-color: white;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
-}
-
-button:hover {
-  background-color: #334;
-  transform: scale(1.25);
-  border-color: rgba(54, 57, 62, 0.125);
-}
-
-/* Discord button specific styling */
 .disc-btn {
   border-color: #5865f2;
 }
@@ -94,7 +114,6 @@ button:hover {
   width: 52px;
 }
 
-/* App button specific styling */
 .app-btn {
   border-color: #4da0d8;
 }
@@ -108,5 +127,14 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 20%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }

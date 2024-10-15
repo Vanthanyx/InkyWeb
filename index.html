@@ -1,5 +1,5 @@
 <head>
-  <title>ɪɴᴋʏ sᴍᴘ</title>
+  <title>Inky SMP</title>
   <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
   <link
     rel="icon"
@@ -7,17 +7,19 @@
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="slider">
     <div class="slide-track" id="slide-track"></div>
   </div>
+
   <div class="center-content">
     <button class="disc-btn" onclick="openDiscord()">
-      <img class="disc-img" src="./assets/DISCORD.png" />
+      <img class="disc-img" src="./assets/DISCORD.png" alt="Discord" />
     </button>
     <span style="margin: 10px"></span>
     <button class="app-btn" onclick="downloadApp()">
-      <img class="app-img" src="./assets/GLOBE_GRID.png" />
+      <img class="app-img" src="./assets/GLOBE_GRID.png" alt="App" />
     </button>
   </div>
 
@@ -33,7 +35,7 @@
       img.src = "./assets/UNDER_CONSTRUCTION.png";
       img.height = 100;
       img.width = 250;
-      img.alt = "";
+      img.alt = "Under Construction";
 
       slideDiv.appendChild(img);
       slideTrack.appendChild(slideDiv);
@@ -42,7 +44,7 @@
     function openDiscord() {
       JSAlert.loader("Redirecting...")
         .dismissIn(2500)
-        .then(function () {
+        .then(() => {
           window.location.href = "https://discord.com/invite/hhXuDc2dzE/";
         });
     }
@@ -53,10 +55,12 @@
         "Beta Release",
         JSAlert.Icons.Warning,
         "OK 📄"
-      ).then(function (result) {
-        if (!result) return;
-        JSAlert.loader("Downloading...").dismissIn(2500);
+      ).then((result) => {
+        if (result) {
+          JSAlert.loader("Downloading...").dismissIn(2500);
+        }
       });
     }
   </script>
+  <script src="./scripts.js"></script>
 </body>
