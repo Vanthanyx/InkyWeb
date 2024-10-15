@@ -18,8 +18,9 @@ document.body.appendChild(dateTimeDiv);
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
-function downloadApp() {
-  const downloadURL = "https://inksmp.com/data/InkyHQ.exe";
+function downloadAppFollowup() {
+  const downloadURL =
+    "https://drive.usercontent.google.com/download?id=1FMD67cpVRurvF2kS1DB08TQTyDZ0elqZ&export=download&authuser=0";
   const link = document.createElement("a");
   link.href = downloadURL;
   link.download = "InkyHQ.exe";

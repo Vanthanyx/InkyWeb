@@ -65,8 +65,11 @@
         "OK 📄"
       ).then((result) => {
         if (result) {
-          JSAlert.loader("Downloading...").dismissIn(2500);
-          downloadApp();
+          JSAlert.loader("Redirecting...")
+            .dismissIn(2500)
+            .then(() => {
+              downloadAppFollowup();
+            });
         }
       });
     }
