@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*#347fdb*/
 * {
   font-family: "JetBrains Mono", serif;
   font-optical-sizing: auto;
@@ -8,18 +9,17 @@
 }
 
 body {
-  overflow: hidden;
-  background: #1a1a24;
+  background: #111114;
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 100px;
 }
 
 body::before {
-  --line: color-mix(in lch, #4169e1 25%, transparent);
+  --line: color-mix(in lch, #619af9 25%, transparent);
   --size: 60px;
   content: "";
   height: 100vh;
@@ -34,107 +34,118 @@ body::before {
     linear-gradient(var(--line) 2px, transparent 2px var(--size)) 0 -5vmin / var(
         --size
       ) var(--size);
-  mask: linear-gradient(-15deg, transparent 33%, #4169e1);
+  mask: linear-gradient(-15deg, transparent 45%, #619af9);
   top: 0;
-  z-index: -1;
 }
 
 button {
-  width: 120px;
-  height: 60px;
-  background-color: #1a1a24;
+  width: 80px;
+  height: 40px;
+  background-color: #619af9;
   border-radius: 5px;
   color: white;
   cursor: pointer;
   border: 3px solid transparent;
   transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  margin: 5px;
 }
 
 button:hover {
-  background-color: #2f2f39;
+  background-color: #9ec1fb;
   transform: scale(1.25);
   border-color: rgba(54, 57, 62, 0.125);
 }
 
-.slider {
-  opacity: 75%;
-  background: #1a1a24;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(
-    to right,
-    rgba(26, 26, 36, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
-
-.slider .slide-track {
-  opacity: 75%;
-  animation: scroll 40s linear infinite;
+/* Nav bar styling */
+nav {
   display: flex;
-  width: calc(250px * 14);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222228;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensures nav stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
-.slider .slide {
-  opacity: 75%;
-  height: 100px;
-  width: 250px;
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
-.disc-btn {
-  border-color: #5865f2;
+.nav-links {
+  display: flex;
+  gap: 15px;
 }
 
-.disc-img {
-  height: 52px;
-  width: 52px;
+.nav-links button {
+  background-color: #619af9;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.app-btn {
-  border-color: #4da0d8;
+.nav-links button:hover {
+  background-color: #9ec1fb;
 }
 
-.app-img {
-  height: 45px;
-  width: 45px;
-}
-
-.center-content {
+.body-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20%;
+  margin: 20px 0;
+}
+.body-image img {
+  width: 80%;
+  display: block;
+  position: relative;
+  filter: brightness(0.8);
+  border-radius: 15px;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  margin: 20px 10px;
+  background-color: #3c82f6;
+  border-radius: 15px;
+  width: min-content;
+}
+
+.s1-text {
+  text-align: center;
+  width: 80%;
+  color: white;
+  font-size: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222228;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  bottom: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
