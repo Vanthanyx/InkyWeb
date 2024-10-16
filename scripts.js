@@ -20,7 +20,7 @@ updateDateTime();
 
 function downloadAppFollowup() {
   const downloadURL =
-    "https://drive.usercontent.google.com/download?id=1FMD67cpVRurvF2kS1DB08TQTyDZ0elqZ&export=download&authuser=0";
+    "https://drive.usercontent.google.com/download?id=1IMDTfoUDQwypW_sRyU35VaLXeRkLUY_f&export=download&authuser=0";
   const link = document.createElement("a");
   link.href = downloadURL;
   link.download = "InkyHQ.exe";
