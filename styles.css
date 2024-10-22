@@ -1,31 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-:root {
-  /** Dark theme primary colors */
-  --color-primary-a0: #4169e1;
-  --color-primary-a10: #5f78e5;
-  --color-primary-a20: #7788e9;
-  --color-primary-a30: #8d98ec;
-  --color-primary-a40: #a1a8f0;
-  --color-primary-a50: #b5b9f3;
-
-  /** Dark theme surface colors */
-  --color-surface-a0: #121212;
-  --color-surface-a10: #282828;
-  --color-surface-a20: #3f3f3f;
-  --color-surface-a30: #575757;
-  --color-surface-a40: #717171;
-  --color-surface-a50: #8b8b8b;
-
-  /** Dark theme mixed surface colors */
-  --color-surface-mixed-a0: #1a1a24;
-  --color-surface-mixed-a10: #2f2f39;
-  --color-surface-mixed-a20: #46454e;
-  --color-surface-mixed-a30: #5d5d65;
-  --color-surface-mixed-a40: #76767d;
-  --color-surface-mixed-a50: #909096;
-}
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
 /*#347fdb*/
 * {
@@ -36,7 +11,7 @@
 }
 
 body {
-  background: #111114;
+  background: black;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -46,7 +21,7 @@ body {
 }
 
 body::before {
-  --line: color-mix(in lch, #619af9 25%, transparent);
+  --line: color-mix(in lch, #488efd 25%, transparent);
   --size: 60px;
   content: "";
   height: 100vh;
@@ -61,43 +36,39 @@ body::before {
     linear-gradient(var(--line) 2px, transparent 2px var(--size)) 0 -5vmin / var(
         --size
       ) var(--size);
-  mask: linear-gradient(-15deg, transparent 45%, #619af9);
+  mask: linear-gradient(-15deg, transparent 35%, #488efd);
   top: 0;
 }
 
 button {
   width: 80px;
   height: 40px;
-  background-color: #619af9;
-  border-radius: 5px;
+  background-color: transparent;
+  border-radius: 15px;
   color: white;
   cursor: pointer;
   border: 3px solid transparent;
-  transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  transition: background-color 0.5s ease;
   margin: 5px;
 }
 
 button:hover {
-  background-color: #9ec1fb;
-  transform: scale(1.25);
-  border-color: rgba(54, 57, 62, 0.125);
+  background-color: #488efd;
 }
 
-/* Nav bar styling */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222228;
+  background-color: #0a0a10;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   width: 90%;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000; /* Ensures nav stays above other content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  z-index: 1000;
 }
 
 .nav-content {
@@ -112,38 +83,45 @@ nav {
   gap: 15px;
 }
 
-.nav-links button {
-  background-color: #619af9;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.nav-links button:hover {
-  background-color: #9ec1fb;
-}
-
 .nav-logo {
   background-color: #70b90f;
   color: white;
   padding: 2px 4px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .body-image {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
 }
+
 .body-image img {
   width: 80%;
   display: block;
   position: relative;
   filter: brightness(0.8);
   border-radius: 15px;
+}
+
+.video-container {
+  width: 80%; /* Match the width of the body images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  width: 80%; /* Ensure iframe takes up the full width of the container */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  border: none;
+  z-index: 10;
+  border-radius: 15px; /* Match the border radius of the images */
+  pointer-events: none;
 }
 
 .container {
@@ -170,16 +148,17 @@ nav {
 }
 
 .footer {
+  font-size: small;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222228;
+  background-color: #0a0a10;
   color: white;
+  margin: 10px;
   padding: 10px;
   border-radius: 5px;
   width: 90%;
   position: relative;
   bottom: 20px;
   margin: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }

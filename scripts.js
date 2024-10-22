@@ -13,6 +13,7 @@ dateTimeDiv.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 dateTimeDiv.style.color = "white";
 dateTimeDiv.style.padding = "5px";
 dateTimeDiv.style.borderRadius = "5px";
+dateTimeDiv.style.fontFamily = '"Silkscreen", sans-serif';
 document.body.appendChild(dateTimeDiv);
 
 setInterval(updateDateTime, 1000);
