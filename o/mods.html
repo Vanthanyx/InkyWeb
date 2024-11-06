@@ -1,0 +1,109 @@
+<head>
+  <title>Inky SMP</title>
+  <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><text y='32' font-size='32'>🦑</text></svg>"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <style>
+    .cards-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #0a0a10;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .card-image {
+      padding-top: 10px;
+      width: 120px;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: whitesmoke;
+      padding: 0 10px 20px;
+    }
+  </style>
+
+  <nav>
+    <div class="nav-content">
+      <a href="https://inkysmp.com/">
+        <img
+          class="nav-logo"
+          style="height: 50px; margin-left: 10px"
+          src="../assets/LOGO.png"
+          alt="Inky SMP"
+        />
+      </a>
+      <div class="nav-links">
+        <button onclick="window.location.href='/';">Home</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cards-section">
+    <div class="card">
+      <img
+        src="https://cdn.modrinth.com/data/3BeIrqZR/icon.png"
+        alt="Card 1 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">Origins</h3>
+      <p class="card-description">
+        Choose an Origin and begin your game with special abilities, some of
+        which help you out, while others hinder you in your gameplay.
+      </p>
+    </div>
+    <div class="card">
+      <img
+        src="https://cdn.modrinth.com/data/POQ2i9zu/21fc204176fc381b20482365c3a36574e706b4d0_96.webp"
+        alt="Card 2 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">Friends & Foes</h3>
+      <p class="card-description">
+        Friends&Foes adds outvoted and forgotten mobs from the mob vote. One of
+        the main goals is to further expand upon original concepts and add new
+        vanilla-like features related to all the mobs.
+      </p>
+    </div>
+    <div class="card">
+      <img
+        src="https://cdn.modrinth.com/data/cs7iGVq1/e5ce74259dece306f7d25c55c59d6afcc3d473ea_96.webp"
+        alt="Card 3 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">YUNG's Better ...</h3>
+      <p class="card-description">
+        A complete redesign of Minecraft's structures like never before. YUNG's
+        Better features redesigns vanilla structures while also adding three new
+        places to explore.
+      </p>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2024 Inky SMP, All rights reserved.</p>
+  </div>
+</body>
