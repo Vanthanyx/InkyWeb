@@ -1,0 +1,153 @@
+<head>
+  <title>Inky SMP</title>
+  <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><text y='32' font-size='32'>🦑</text></svg>"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <style>
+    form {
+      color: white;
+    }
+    button:hover {
+      background-color: #d43e3e;
+      color: white;
+    }
+    .report-btn {
+      background-color: white;
+      color: black;
+    }
+    .report-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      z-index: 1000;
+    }
+    .card {
+      background-color: #0a0a10;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+      z-index: 1000;
+    }
+  </style>
+  <nav>
+    <div class="nav-content">
+      <a href="https://inkysmp.com/">
+        <img
+          class="nav-logo"
+          style="height: 50px; margin-left: 10px"
+          src="../assets/LOGO.png"
+          alt="Inky SMP"
+        />
+      </a>
+      <div class="nav-links">
+        <button onclick="window.location.href='/';">Cancel</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="card">
+    <form class="report-form">
+      <label for="playerName">*Player Name:</label>
+      <input type="text" id="playerName" name="playerName" required />
+      <br />
+      <label for="category">*Category:</label>
+      <div style="text-align: left !important">
+        <div>
+          <input type="checkbox" id="hacking" name="category" value="hacking" />
+          <label for="hacking">Hacking/Exploiting</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="greifing"
+            name="category"
+            value="greifing"
+          />
+          <label for="greifing">Stealing/Greifing</label>
+        </div>
+        <div>
+          <input type="checkbox" id="abuse" name="category" value="abuse" />
+          <label for="abuse">Chat Abuse</label>
+        </div>
+        <div>
+          <input type="checkbox" id="other" name="category" value="other" />
+          <label for="other">Other</label>
+        </div>
+      </div>
+      <br />
+      <label for="reason">Reason:</label>
+      <textarea id="reason" name="reason" required></textarea>
+      <br />
+      <button class="report-btn" onclick="beginReport(event)">Report</button>
+    </form>
+  </div>
+  <script>
+    function beginReport(event) {
+      event.preventDefault(); // Prevent form submission
+      const playerName = document.getElementById("playerName").value;
+      const category = document.querySelector(
+        'input[name="category"]:checked'
+      ).value;
+      const reason = document.getElementById("reason").value;
+      const report = {
+        playerName,
+        category,
+        reason,
+      };
+      console.log(report);
+      fetch(
+        "https://discord.com/api/webhooks/1303559670941745192/hc5qOdIWdUMc-TgiPToBKnsq3bx1Ry7CYvBFb9iYmYxlFj-86JOyLjYh9kjdwtJqh9Nf",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            embeds: [
+              {
+                title: "User Report",
+                fields: [
+                  {
+                    name: "Player Name",
+                    value: playerName,
+                  },
+                  {
+                    name: "Category",
+                    value: category,
+                  },
+                  {
+                    name: "Reason",
+                    value: reason,
+                  },
+                ],
+                color: 3447003, // Light blue color
+              },
+            ],
+          }),
+        }
+      )
+        .then((response) => {
+          if (response.ok) {
+            JSAlert.alert("Report sent successfully!");
+          } else {
+            JSAlert.alert("Failed to send report.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          JSAlert.alert("An error occurred while sending the report.");
+        });
+    }
+  </script>
+</body>
