@@ -162,3 +162,45 @@ nav {
   bottom: 20px;
   margin: 20px;
 }
+
+.popup {
+  z-index: 1000;
+  margin: 0;
+  padding: 20px;
+  background: black;
+  border: 1px solid #3c82f6;
+  width: 300px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+.popup h2,
+.popup p {
+  margin-top: 0;
+  color: white;
+}
+
+.popup .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: lightcoral;
+  cursor: pointer;
+}
+
+.content a {
+  color: #488efd;
+  text-decoration: underline;
+  cursor: pointer;
+}
