@@ -1,0 +1,132 @@
+<head>
+  <title>Inky SMP</title>
+  <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><text y='32' font-size='32'>🦑</text></svg>"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <style>
+    .cards-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      background-color: rgba(10, 10, 16, 0.5);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 20vw;
+      text-align: center;
+      margin: 10px;
+      z-index: 9999;
+      padding-bottom: 40px;
+    }
+
+    .card-image {
+      margin-top: 15px;
+      width: 120px;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: whitesmoke;
+      padding: 0 10px 20px;
+    }
+
+    .card-button {
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+
+  <nav>
+    <div class="nav-content">
+      <a href="https://inkysmp.com/">
+        <img
+          class="nav-logo"
+          style="height: 50px; margin-left: 10px"
+          src="../assets/LOGO.png"
+          alt="Inky SMP"
+        />
+      </a>
+      <div class="nav-links">
+        <button onclick="window.location.href='/';">Home</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cards-section">
+    <div class="card">
+      <img
+        src="https://cdn.modrinth.com/data/P7dR8mSH/icon.png"
+        alt="Card 1 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">Installing Fabric</h3>
+      <p class="card-description">
+        Fabric is a lightweight mod loader for Minecraft. It is required that
+        you install Fabric to play on the Inky SMP server.
+      </p>
+
+      <a href="https://inkysmp.com/g/installing-fabric"
+        ><button class="card-button">Learn More</button></a
+      >
+    </div>
+    <div class="card">
+      <img
+        src="https://cdn.modrinth.com/data/3BeIrqZR/icon.png"
+        alt="Card 2 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">Mod Guides</h3>
+      <p class="card-description">
+        Learn more about the mods we use on the server and how to use them and
+        what they add to your gameplay.
+      </p>
+
+      <a href="https://inkysmp.com/g/about-the-mods"
+        ><button class="card-button">Learn More</button></a
+      >
+    </div>
+    <div class="card">
+      <img
+        src="https://inkysmp.com/assets/LOGO.png"
+        alt="Card 3 Image"
+        class="card-image"
+      />
+      <h3 class="card-title">Inky Addons</h3>
+      <p class="card-description">Coming Soon...</p>
+      <button class="card-button" disabled>Learn More</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2024 Inky SMP, All rights reserved.</p>
+  </div>
+</body>
