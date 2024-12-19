@@ -14,3 +14,10 @@ MODS:
   - "Origins-1.13.0-alpha.9+mc.1.21.x.jar"
   - "owo-lib-0.12.15+1.21.jar"
   - "voicechat-fabric-1.21.1-2.5.25.jar"
+MODS_URL:
+  - "https://cdn.modrinth.com/data/fnAffV0n/versions/RXdwJw5B/deeperdarker-fabric-1.21-1.3.2.1.jar"
+  - "https://cdn.modrinth.com/data/P7dR8mSH/versions/WTaAx4ah/fabric-api-0.105.0%2B1.21.1.jar"
+  - "https://cdn.modrinth.com/data/POQ2i9zu/versions/eUncYB8D/friendsandfoes-fabric-mc1.21.1-3.0.5.jar"
+  - "https://cdn.modrinth.com/data/3BeIrqZR/versions/BUZYwxOO/Origins-1.13.0-alpha.9%2Bmc.1.21.x.jar"
+  - "https://cdn.modrinth.com/data/ccKDOlHs/versions/vCCHsvEa/owo-lib-0.12.15%2B1.21.jar"
+  - "https://cdn.modrinth.com/data/9eGKb6K1/versions/ojiqfkMY/voicechat-fabric-1.21.1-2.5.25.jar"
