@@ -1,7 +1,7 @@
 WEB_DB_RUN: true
 LATEST_VERSION: "1.0.1"
 UPDATER_URL: "https://discord.com/channels/1204552617615827056/1208184532268744704"
-INSTALLER_URL: "https://inkysmp.com/installer"
+INSTALLER_URL: "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.0.1/inkyhq-1.0.1.Setup.exe"
 APP_LIVE: true
 NEWS:
   - "v1.0.0 Stable Build — Disables 01/01/25"
