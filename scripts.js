@@ -21,5 +21,5 @@ updateDateTime();
 
 function downloadAppFollowup() {
   window.location.href =
-    "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.0.1/inkyhq-1.0.1.Setup.exe";
+    "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.2.0/inkyhq-1.2.0.Setup.exe";
 }

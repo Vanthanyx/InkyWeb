@@ -1,13 +1,14 @@
 WEB_DB_RUN: true
-LATEST_VERSION: "1.0.1"
+LATEST_VERSION: "1.2.0"
 UPDATER_URL: "https://discord.com/channels/1204552617615827056/1208184532268744704"
-INSTALLER_URL: "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.0.1/inkyhq-1.0.1.Setup.exe"
+INSTALLER_URL: "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.2.0/inkyhq-1.2.0.Setup.exe"
 APP_LIVE: true
 NEWS:
-  - "v1.0.0 Stable Build — Disables 01/01/25"
+  - "v1.2.0 Stable Build — Deactivates 02/01/25"
   - "Season 4 live now!"
   - "Latest Modpack Version: 1.0.1-12.26"
-  - "New features in development."
+  - "App module trimming in next update."
+  - "December 26th: Mods updated today."
 MODS:
   - "deeperdarker-fabric-1.21-1.3.3.jar"
   - "fabric-api-0.110.0+1.21.1.jar"
