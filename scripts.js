@@ -19,30 +19,7 @@ document.body.appendChild(dateTimeDiv);
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
-async function downloadAppFollowup() {
-  try {
-    // Fetch the YAML file
-    const response = await fetch("https://inkysmp.com/data/WEB.yml");
-    if (!response.ok)
-      throw new Error("Failed to fetch the configuration file.");
-
-    // Parse the YAML file
-    const yamlText = await response.text();
-    const config = jsyaml.load(yamlText); // Assumes js-yaml library is included
-
-    // Get the UPDATER_URL
-    const downloadURL = config.UPDATER_URL;
-    if (!downloadURL)
-      throw new Error("UPDATER_URL not found in the configuration file.");
-
-    // Create and trigger the download
-    const link = document.createElement("a");
-    link.href = downloadURL;
-    link.download = "InkyHQ.exe";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } catch (error) {
-    console.error("Error during download:", error.message);
-  }
+function downloadAppFollowup() {
+  window.location.href =
+    "https://github.com/Vanthanyx/InkyHQ/releases/download/v1.0.1/inkyhq-1.0.1.Setup.exe";
 }
