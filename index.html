@@ -1,119 +1,23 @@
 <head>
-  <title>Inky SMP</title>
-  <meta property="og:title" content="Inky SMP - Season 3" />
-  <meta property="og:image" content="https://inkysmp.com/assets/SQUID.png" />
-  <meta property="og:url" content="https://inkysmp.com/" />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:description"
-    content="A Minecraft server designed for players who want a unique, custom-built experience. A vanilla experience with resource worlds and land claiming, our community offers endless adventures. Whether you're building, exploring, or collaborating with friends, Inky SMP provides a friendly environment for all. Join us and be part of the journey!"
-  />
-  <script src="https://unpkg.com/js-alert/dist/jsalert.min.js"></script>
-  <link
-    rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><text y='32' font-size='32'>🦑</text></svg>"
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Inky SMP [CLOSED]</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
-  <nav>
-    <div class="nav-content">
-      <a href="https://inkysmp.com/">
-        <img
-          class="nav-logo"
-          style="height: 50px; margin-left: 10px"
-          src="./assets/LOGO.png"
-          alt="Inky SMP"
-        />
+  <div class="content">
+    <h1>INKY SMP <span class="closed">CLOSED</span></h1>
+    <hr />
+    <p>
+      Inky SMP has been retired and partially repurposed into
+      <strong>RIFTSCAPE</strong>, a new project expanding on its core ideas with
+      a fresh vision. While the original server is no longer active, RIFTSCAPE
+      continues to evolve as a modded experience with new features and content.
+    </p>
+    <hr />
+    <p>
+      For more information, visit
+      <a href="https://riftscape.net/">
+        <button>riftscape.net</button>
       </a>
-      <div class="nav-links">
-        <button onclick="window.location.href='/o/rules'">RULES</button>
-        <button onclick="window.location.href='/o/mods'">MODS</button>
-        <button onclick="window.location.href='/o/guides'">GUIDES</button>
-        <button
-          onclick="window.location.replace('https://discord.com/invite/hhXuDc2dzE/')"
-        >
-          DISCORD
-        </button>
-        <button onclick="downloadApp()">APP</button>
-      </div>
-    </div>
-  </nav>
-
-  <div id="popup1" class="overlay">
-    <div class="popup">
-      <h2>New Players!</h2>
-      <a class="close">&times;</a>
-      <div class="content">
-        <p>
-          Please join the
-          <a href="https://discord.com/invite/hhXuDc2dzE/">Discord</a> to access
-          the server.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="video-container">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/NG-5L34HqOs?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0"
-      title="Video Player"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-    ></iframe>
-  </div>
-
-  <div class="s1-text">
-    <h1>Inky&nbsp;SMP</h1>
-    <p>
-      A Minecraft server designed for players who want a unique, custom-built
-      experience. A modded experience with origins and custom structures, our
-      community offers endless adventures. Whether you're building, exploring,
-      or collaborating with friends, Inky SMP provides a friendly environment
-      for all. Join us and be part of the journey!
     </p>
   </div>
-
-  <div class="body-image">
-    <img src="./assets/MANGROVE.jpg" alt="Mangrove Art" />
-  </div>
-
-  <div class="s1-text">
-    <h1>Season&nbsp;4.0</h1>
-    <p>
-      Season 4 of Inky SMP is here! With a fresh world and new features, there's
-      never been a better time to join. Our community is growing, and we're
-      excited to welcome new players. Whether you're a seasoned veteran or new
-      to the game, we have something for everyone. Join us and start your
-      adventure today!
-    </p>
-  </div>
-  <div class="body-image">
-    <img src="./assets/SWAMP.jpg" alt="Swamp Art" />
-  </div>
-
-  <script>
-    function downloadApp() {
-      JSAlert.confirm(
-        "Would you like to download the latest version of the Inky SMP app?",
-        "Latest Release",
-        null,
-        "OK 📄"
-      ).then((result) => {
-        if (result) {
-          JSAlert.loader("Redirecting...")
-            .dismissIn(2500)
-            .then(() => {
-              downloadAppFollowup();
-            });
-        }
-      });
-    }
-  </script>
-  <script src="./scripts.js"></script>
-  <script src="./s/popup.js"></script>
 </body>

@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+:root {
+  --base: #18181a; /* Base color */
+  --dark_base: #0e0e11; /* Dark Base color */
+  --acc: var(--blue); /* Accent color */
+
+  /* Rainbow Accent Colors */
+  --red: #ff666e; /* Soft Red */
+  --crimson: #b3404a; /* Soft Crimson */
+  --orange: #ff8a50; /* Soft Orange */
+  --amber: #ffca60; /* Soft Amber */
+  --yellow: #ffef7d; /* Soft Yellow */
+  --lime: #7dfa72; /* Soft Lime */
+  --green: #60ed9d; /* Soft Green */
+  --teal: #4db6ac; /* Soft Teal */
+  --cyan: #4dd0e1; /* Soft Cyan */
+  --blue: #5490ff; /* Soft Blue */
+  --indigo: #7986cb; /* Soft Indigo */
+  --violet: #ba68c8; /* Soft Violet */
+  --purple: #ab47bc; /* Soft Purple */
+  --pink: #ec407a; /* Soft Pink */
+  --magenta: #ff66ff; /* Soft Magenta */
+
+  /* Developer Colors */
+  --white: #ffffff; /* Soft White */
+  --NYX: #6f00ff; /* Soft Black Red */
+}
+
+/*#347fdb*/
+* {
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: var(--dark_base);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+body::before {
+  --line: color-mix(in lch, var(--acc) 25%, transparent);
+  --size: 60px;
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: linear-gradient(
+        90deg,
+        var(--line) 2px,
+        transparent 2px var(--size)
+      )
+      0 -5vmin / var(--size) var(--size),
+    linear-gradient(var(--line) 2px, transparent 2px var(--size)) 0 -5vmin / var(
+        --size
+      ) var(--size);
+  mask: linear-gradient(-15deg, transparent 35%, var(--acc));
+  top: 0;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: background-color 0.5s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: var(--dark_base);
+  border: white 2px solid;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark_base);
+  border: var(--acc) 2px solid;
+  padding: 10px;
+  border-radius: 30px;
+  width: 90%;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-logo {
+  /*background-color: #70b90f;*/
+  color: white;
+  padding: 2px 4px;
+  border-radius: 15px;
+}
+
+.body-image {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.body-image img {
+  width: 80%;
+  display: block;
+  position: relative;
+  filter: brightness(0.8);
+  border-radius: 15px;
+}
+
+.video-container {
+  width: 80%; /* Match the width of the body images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  width: 80%; /* Ensure iframe takes up the full width of the container */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  border: none;
+  z-index: 10;
+  border-radius: 15px; /* Match the border radius of the images */
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  margin: 20px 10px;
+  background-color: #3c82f6;
+  border-radius: 15px;
+  width: min-content;
+}
+
+.s1-text {
+  text-align: center;
+  width: 80%;
+  color: white;
+  font-size: 24px;
+}
+
+.popup {
+  z-index: 1000;
+  margin: 0;
+  padding: 20px;
+  background: black;
+  border: 1px solid var(--acc);
+  width: 300px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+.popup h2,
+.popup p {
+  margin-top: 0;
+  color: white;
+}
+
+.popup .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: lightcoral;
+  cursor: pointer;
+}
+
+.content a {
+  color: var(--acc);
+  text-decoration: underline;
+  cursor: pointer;
+}
